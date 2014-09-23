@@ -9,7 +9,7 @@ class RoomsController < ApplicationController
   end
 
   def create
-  	user = User.first
+  	user = User.find(params[:user_id])
   	# respond_with Room.create(room_params)
   	# if mastr
   	respond_with user.rooms.create(room_params)
