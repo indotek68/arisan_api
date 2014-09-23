@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20140919180604) do
 
   create_table "user_rooms", force: true do |t|
     t.boolean  "has_won",    default: false
+    t.string   "host_id"
     t.integer  "user_id"
     t.integer  "room_id"
     t.datetime "created_at"

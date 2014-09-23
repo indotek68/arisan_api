@@ -30,4 +30,30 @@
 # 	end
 # end
 
+# Room.find(1).users << User.find(5)
+# Room.find(1).users << User.find(9)
+# Room.find(1).users << User.find(8)
+
+# Room.find(2).users << User.find(5)
+# Room.find(2).users << User.find(6)
+# Room.find(2).users << User.find(7)
+# Room.find(2).users << User.find(8)
+# Room.find(2).users << User.find(9)
+# Room.find(2).users << User.find(10)
+# Room.find(2).users << User.find(11)
+# Room.find(2).users << User.find(12)
+
+# Room.find(3).users << User.find(12)
+# Room.find(3).users << User.find(13)
+# Room.find(3).users << User.find(9)
+# Room.find(3).users << User.find(15)
+
+Room.find(4).users << User.find(5)
+Room.find(4).users << User.find(11)
+Room.find(4).users << User.find(12)
+Room.find(4).users << User.find(14)
+
+
+
+
 
