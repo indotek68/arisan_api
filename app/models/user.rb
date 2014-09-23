@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 
 	has_secure_password
 
+	has_many :user_room
 	has_many :rooms, :through => :user_room
 
 	validates :firstname, presence: true, :length => {:minimum => 2}

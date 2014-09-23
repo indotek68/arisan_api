@@ -17,6 +17,7 @@ class UsersController < ApplicationController
   	# respond_with User.create(params)
     # binding.pry
     respond_with User.create(user_params)
+
   end
 
   def show

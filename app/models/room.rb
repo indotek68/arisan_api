@@ -1,5 +1,8 @@
 class Room < ActiveRecord::Base
+
+	has_many :user_room
 	has_many :users, :through => :user_room
+	
 	VALID_SCHEDULE = %w(Weekly weekly Bi-weekly bi-weekly Monthly monthly)
 
 	validates :rm_name, presence: true, uniqueness: true
