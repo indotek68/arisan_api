@@ -5,7 +5,9 @@ class RoomsController < ApplicationController
 	respond_to :json, :html
 
   def index
-  	respond_with (@rooms = Room.all())
+  	# respond_with (@rooms = Room.all())
+  	# respond_with UserRoom.all.to_json(:include => [:users, :room])
+  	respond_with Room.all.to_json(:include => [:users, :user_room])
   end
 
   def create
