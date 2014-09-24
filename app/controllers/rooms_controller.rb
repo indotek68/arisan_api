@@ -10,15 +10,10 @@ class RoomsController < ApplicationController
 
   def create
   	user = User.find(params[:user_id])
-  	# respond_with Room.create(room_params)
-  	# if mastr
   	respond_with user.rooms.create(room_params)
-	  # else
-  	# respond_with User.find(:id) << rooms(:id)
   end
 
   def info
-  	# @user = User.find(params[:user_id])
   	@room = Room.find(params[:room_id])
   	respond_with @room.users
   end
