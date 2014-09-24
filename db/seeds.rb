@@ -46,13 +46,18 @@
 # Room.find(3).users << User.find(12)
 # Room.find(3).users << User.find(13)
 # Room.find(3).users << User.find(9)
-# Room.find(3).users << User.find(15)
+# Room.find(3).users << User.find(14)
 
-Room.find(4).users << User.find(5)
-Room.find(4).users << User.find(11)
-Room.find(4).users << User.find(12)
-Room.find(4).users << User.find(14)
+# Room.find(4).users << User.find(5)
+# Room.find(4).users << User.find(11)
+# Room.find(4).users << User.find(12)
+# Room.find(4).users << User.find(14)
 
+
+# UserRoom.where(:room_id => 1).update_all(host_id: 5)
+# UserRoom.where(:room_id => 2).update_all(host_id: 6)
+# UserRoom.where(:room_id => 3).update_all(host_id: 12)
+# UserRoom.where(:room_id => 4).update_all(host_id: 5)
 
 
 

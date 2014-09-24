@@ -10,7 +10,15 @@ class RoomsController < ApplicationController
 
   def create
   	user = User.find(params[:user_id])
-  	respond_with user.rooms.create(room_params)
+  	room = user.rooms.create(room_params)
+
+  	puts "adding host_id to join table"
+  	user_room = UserRoom.find_by_room_id(room.id)
+  	user_room.host_id = user.id
+  	user_room.save
+  	puts "done adding host_id to join table"
+
+  	respond_with room
   end
 
   def info
