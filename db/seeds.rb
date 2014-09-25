@@ -7,11 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # require 'ffaker'
 
-# 7.times do
+# 20.times do
 #   User.new.tap do |u|
 #   	u.firstname = Faker::Name.first_name
 #   	u.lastname = Faker::Name.last_name
-#   	u.image_url = "http://i.imgur.com/4f1r998.png"
+#   	u.image_url = "http://www.votipets.com/images/avatars/ironman.png"
 #     u.email = Faker::Internet.email
 #     u.password = 'password'
 #     u.description = Faker::HipsterIpsum.paragraph
@@ -53,19 +53,44 @@
 # Room.find(4).users << User.find(12)
 # Room.find(4).users << User.find(14)
 
-#  
+Room.find(5).users << User.find(5)
+Room.find(6).users << User.find(11)
+Room.find(7).users << User.find(12)
+
+
+
+ 
 
 
 # UserRoom.where(:room_id => 1).update_all(host_id: 5)
 # UserRoom.where(:room_id => 2).update_all(host_id: 6)
 # UserRoom.where(:room_id => 3).update_all(host_id: 12)
 # UserRoom.where(:room_id => 4).update_all(host_id: 5)
+UserRoom.where(:room_id => 5).update_all(host_id: 5)
+UserRoom.where(:room_id => 6).update_all(host_id: 11)
+UserRoom.where(:room_id => 7).update_all(host_id: 12)
+
+
+
+
+
 # UserRoom.where(:room_id => 5).update_all(host_id: 6)
 # UserRoom.where(:room_id => 6).update_all(host_id: 7)
 # UserRoom.where(:room_id => 7).update_all(host_id: 8)
 # UserRoom.where(:room_id => 8).update_all(host_id: 9)
 # UserRoom.where(:room_id => 9).update_all(host_id: 10)
 # UserRoom.where(:room_id => 10).update_all(host_id: 11)
+# UserRoom.where(:room_id => 11).update_all(host_id: 12)
+# UserRoom.where(:room_id => 12).update_all(host_id: 13)
+# UserRoom.where(:room_id => 13).update_all(host_id: 14)
+# UserRoom.where(:room_id => 14).update_all(host_id: 15)
+# UserRoom.where(:room_id => 15).update_all(host_id: 16)
+# UserRoom.where(:room_id => 16).update_all(host_id: 17)
+# UserRoom.where(:room_id => 17).update_all(host_id: 18)
+# UserRoom.where(:room_id => 18).update_all(host_id: 19)
+# UserRoom.where(:room_id => 19).update_all(host_id: 20)
+# UserRoom.where(:room_id => 20).update_all(host_id: 20)
+
 
 
 
