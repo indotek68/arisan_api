@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
   def new
   end
 
+
   def create
     @user = User.authenticate(params[:user][:email], params[:user][:password])
   
@@ -28,6 +29,8 @@ class SessionsController < ApplicationController
   def logged_in_user
     if session[:user_id]
       render json: User.find_by_id(session[:user_id])
+    else
+      render json: {}, status: 400
     end
   end
   

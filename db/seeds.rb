@@ -53,11 +53,20 @@
 # Room.find(4).users << User.find(12)
 # Room.find(4).users << User.find(14)
 
+#  
+
 
 # UserRoom.where(:room_id => 1).update_all(host_id: 5)
 # UserRoom.where(:room_id => 2).update_all(host_id: 6)
 # UserRoom.where(:room_id => 3).update_all(host_id: 12)
 # UserRoom.where(:room_id => 4).update_all(host_id: 5)
+# UserRoom.where(:room_id => 5).update_all(host_id: 6)
+# UserRoom.where(:room_id => 6).update_all(host_id: 7)
+# UserRoom.where(:room_id => 7).update_all(host_id: 8)
+# UserRoom.where(:room_id => 8).update_all(host_id: 9)
+# UserRoom.where(:room_id => 9).update_all(host_id: 10)
+# UserRoom.where(:room_id => 10).update_all(host_id: 11)
+
 
 
 

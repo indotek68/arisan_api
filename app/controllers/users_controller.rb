@@ -16,8 +16,9 @@ class UsersController < ApplicationController
   def create
   	# respond_with User.create(params)
     # binding.pry
-    respond_with User.create(user_params)
-
+    user = User.create(user_params)
+    session[:user_id] = user.id
+    respond_with user
   end
 
   def show
