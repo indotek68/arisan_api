@@ -25,7 +25,8 @@ class RoomsController < ApplicationController
 
   def info
   	@room = Room.find(params[:room_id])
-  	respond_with @room.users
+  	# respond_with @room.users
+    respond_with @room.to_json(:include => [:users, :user_room])
   end
 
   def join
