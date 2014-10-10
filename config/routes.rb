@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get '/logged_in_user', to: 'sessions#logged_in_user'
   get 'user/:host_id/dash', to: 'user_rooms#current_room'
-  # post '/user/:host_id/room/:room_id', to: 'user_rooms#host'
+  
 
   resources :rooms 
   resources :users

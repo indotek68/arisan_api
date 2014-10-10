@@ -30,9 +30,11 @@ class RoomsController < ApplicationController
   end
 
   def join
-  	@user = User.find(params[:user_id])
-  	@room = Room.find(params[:room_id])
-  	respond_with @room.users << @user
+  	@user_id = User.find(params[:user_id])
+  	@room_id = Room.find(params[:room_id])
+    @host_id = params.require(:host).permit(:host_id)
+  	respond_with @room_id.users << @user_id
+    # UserRoom.where(:room_id => @room).update_all(host_id: @host_id)
   end
 
   def show
